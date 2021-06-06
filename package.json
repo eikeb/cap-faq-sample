@@ -4,6 +4,8 @@
   "description": "FAQ Sample application with SAP CAP",
   "main": "index.js",
   "scripts": {
+    "start": "cds run",
+    "watch": "cds watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/eikeb/cap-faq-sample#readme",
   "dependencies": {
-    "@sap/cds": "^5.1.5"
+    "@sap/cds": "^5.1.5",
+    "express": "^4.17.1"
   }
 }
