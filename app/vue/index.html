@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Sample Application</title>
+    <link rel="stylesheet" href="https://unpkg.com/primitive-ui/dist/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        .hovering tr:hover td {
+            color: cyan;
+            background: #123;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="small-container", style="margin-top: 70px;">
+<div id='app'>
+
+    <h1> {{ document.title }} </h1>
+
+    <input type="text" placeholder="Search..." @input="search">
+
+    <table id='books' class="hovering">
+        <thead>
+            <th> Category </th>
+            <th> Question </th>
+            <th> Answer </th>
+            <th> Released </th>
+        </thead>
+        <tr v-for="question in questions" v-bind:id="question.ID" v-on:click="inspect">
+            <td>{{ question.category.name }}</td>
+            <td>{{ question.question }}</td>
+            <td>{{ question.answer }}</td>
+            <td>{{ question.released ? 'Yes' : 'No' }}</td>
+        </tr>
+    </table>
+
+    <div v-if="question">
+        <h4> {{ question.question }} </h4>
+        <p> {{ question.answer }} </p>
+    </div>
+    <div v-else>
+        ( click on a row to see details... )
+    </div>
+</div>
+</body>
+
+<script src="app.js"></script>
+</html>
