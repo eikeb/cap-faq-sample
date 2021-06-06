@@ -1,0 +1,22 @@
+{
+  "name": "cap-faq-sample",
+  "version": "1.0.0",
+  "description": "FAQ Sample application with SAP CAP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eikeb/cap-faq-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eikeb/cap-faq-sample/issues"
+  },
+  "homepage": "https://github.com/eikeb/cap-faq-sample#readme",
+  "dependencies": {
+    "@sap/cds": "^5.1.5"
+  }
+}
